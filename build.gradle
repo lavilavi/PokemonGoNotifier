@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "http://logst17.dev.infoscience.co.jp:8081/artifactory/public/"
+    }
+    maven {
+        url "http://oss.sonatype.org/content/repositories/snapshots"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.5'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.5.2'
+
+    compile 'com.fasterxml.jackson.core:jackson-core:2.5.3';
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3';
+    compile 'org.apache.commons:commons-lang3:3.4';
+}
